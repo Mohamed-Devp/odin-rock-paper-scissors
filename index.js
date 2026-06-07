@@ -10,3 +10,15 @@ function getComputerChoice() {
 
     return "scissors";
 }
+
+function getPlayerChoice() {
+    const validChoices = ["rock", "paper", "scissors"];
+
+    let choice = prompt("Enter your choice:").toLowerCase();
+
+    while (!validChoices.includes(choice)) {
+        choice = prompt("Please enter a valid choice (i.e., rock or paper or scissors):").toLowerCase(); 
+    }
+
+    return choice;
+}
