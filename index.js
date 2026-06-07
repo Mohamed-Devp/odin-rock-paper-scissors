@@ -1,3 +1,6 @@
+let computerScore = 0;
+let playerScore = 0;
+
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3) + 1;
 
