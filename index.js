@@ -25,3 +25,27 @@ function getPlayerChoice() {
 
     return choice;
 }
+
+function playRound(playerChoice, computerChoice) {
+    const winCombinations = ["rock scissors", "paper rock", "scissors paper"];
+    const loseCombinations = ["rock paper", "paper scissors", "scissors rock"];
+
+    const currentCombination = `${playerChoice} ${computerChoice}`;
+
+    if (winCombinations.includes(currentCombination)) {
+        console.log(`You win! ${playerChoice} beats ${computerChoice}.`);
+        playerScore += 1;
+    }
+    else if (loseCombinations.includes(currentCombination)) {
+        console.log(`You lose! ${computerChoice} beats ${playerChoice}.`);
+        computerScore += 1;
+    }
+    else {
+        console.log("A draw!");
+    }
+}
+
+const playerSelection = getPlayerChoice();
+const computerSelection = getComputerChoice();
+
+playRound(playerSelection, computerSelection);
