@@ -33,19 +33,34 @@ function playRound(playerChoice, computerChoice) {
     const currentCombination = `${playerChoice} ${computerChoice}`;
 
     if (winCombinations.includes(currentCombination)) {
-        console.log(`You win! ${playerChoice} beats ${computerChoice}.`);
+        alert(`You win! ${playerChoice} beats ${computerChoice}.`);
         playerScore += 1;
     }
     else if (loseCombinations.includes(currentCombination)) {
-        console.log(`You lose! ${computerChoice} beats ${playerChoice}.`);
+        alert(`You lose! ${computerChoice} beats ${playerChoice}.`);
         computerScore += 1;
     }
     else {
-        console.log("A draw!");
+        alert("A draw!");
     }
 }
 
-const playerSelection = getPlayerChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
+    const numberOfRounds = 5;
 
-playRound(playerSelection, computerSelection);
+    for (let i = 0; i < numberOfRounds; i++) {
+        const playerSelection = getPlayerChoice();
+        const computerSelection = getComputerChoice();
+
+        playRound(playerSelection, computerSelection);
+    }
+
+    if (playerScore > computerScore) {
+        alert(`Congratulations; You won! You ${playerScore} - ${computerScore} Computer`);
+    }
+    else {
+        alert(`Better luck next time; You lost! You ${playerScore} - ${computerScore} Computer`)
+    }
+}
+
+playGame();
