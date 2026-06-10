@@ -93,3 +93,19 @@ button:disabled {
 .is-hidden {
     display: none;
 }
+
+/* || MEDIA QUERIES */
+
+@media screen and (min-width: 48rem) {
+    .page__inner {
+        flex-direction: row;
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .card__image {
+        width: 10rem;
+        height: 10rem;
+    }
+}
