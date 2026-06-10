@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -11,25 +12,25 @@
 <body class="page">
     <div class="page__inner">
         <button class="card card_choice_rock">
-            <img src="images/hand-rock.svg" alt="Rock">
+            <img class="card__image" src="images/hand-rock.svg" alt="Rock">
         </button>
         <button class="card card_choice_paper">
-            <img src="images/hand-rock.svg" alt="Paper">
+            <img class="card__image" src="images/hand-paper.svg" alt="Paper">
         </button>
         <button class="card card_choice_scissors">
-            <img src="images/hand-rock.svg" alt="Scissors">
+            <img class="card__image" src="images/hand-scissors.svg" alt="Scissors">
         </button>
-        <div class="status u-hidden">
-            <p class="status__sr-content" aria-live="polite"></p>
+        <div class="status is-hidden">
+            <p class="status__sr-content u-sr-only" aria-live="polite"></p>
             <p class="status__content"></p>
             <button class="btn btn_label_next-round">
                 Next Round
             </button>
-            <button class="btn btn_label_play-again u-hidden">
+            <button class="btn btn_label_play-again is-hidden">
                 Play Again
             </button>
         </div>
-        <div class="card card_label_computer-choice u-hidden">
+        <div class="card card_label_computer-choice is-hidden">
             <img class="card__image" alt="">
         </div>
     </div>

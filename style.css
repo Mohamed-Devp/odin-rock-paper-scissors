@@ -1,0 +1,95 @@
+/* || RESET */
+
+* {
+    padding: 0;
+    border: unset;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* || BASE */
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+/* || UTILITIES */
+
+.u-sr-only {
+    position: absolute;
+    right: 100%; bottom: 100%;
+    clip-path: inset(100%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* || BLOCKS */
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.page__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.card {
+    padding: 2rem;
+    border-radius: 4px;
+    background-color: hsl(214 35% 37%);
+    box-shadow: 6px 6px 8px hsl(0 0% 0% / 0.2);
+}
+
+.card__image {
+    width: 6rem;
+    height: 6rem;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.status__content {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: hsl(210 11% 15%);
+}
+
+.btn {
+    padding: 0.875rem 1.75rem;
+    border-radius: 4px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: hsl(0 100% 100%);
+    background-color: hsl(210 11% 15%);
+}
+
+/* || STATES */
+
+.is-hidden {
+    display: none;
+}
