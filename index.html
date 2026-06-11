@@ -11,17 +11,17 @@
 </head>
 <body class="page">
     <div class="page__inner">
-        <button class="card card_choice_rock">
+        <button class="card card_type_select" data-choice="rock">
             <img class="card__image" src="images/hand-rock.svg" alt="Rock">
         </button>
-        <button class="card card_choice_paper">
+        <button class="card card_type_select" data-choice="paper">
             <img class="card__image" src="images/hand-paper.svg" alt="Paper">
         </button>
-        <button class="card card_choice_scissors">
+        <button class="card card_type_select" data-choice="scissors">
             <img class="card__image" src="images/hand-scissors.svg" alt="Scissors">
         </button>
+        <p class="sr-status u-sr-only" aria-live="polite"></p>
         <div class="status is-hidden">
-            <p class="status__sr-content u-sr-only" aria-live="polite"></p>
             <p class="status__content"></p>
             <button class="btn btn_label_next-round">
                 Next Round
@@ -31,7 +31,21 @@
             </button>
         </div>
         <div class="card card_label_computer-choice is-hidden">
-            <img class="card__image" alt="">
+            <img
+                class="card__image card__image_choice_rock"
+                src="images/hand-rock.svg"
+                alt=""
+            />
+            <img
+                class="card__image card__image_choice_paper"
+                src="images/hand-paper.svg"
+                alt=""
+            />
+            <img
+                class="card__image card__image_choice_scissors"
+                src="images/hand-scissors.svg"
+                alt=""
+            />
         </div>
     </div>
     <script src="index.js"></script>

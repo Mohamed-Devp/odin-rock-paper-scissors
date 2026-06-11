@@ -65,6 +65,22 @@ button:disabled {
     height: 6rem;
 }
 
+.card_label_computer-choice .card__image {
+    display: none;
+}
+
+.card_choice_rock .card__image_choice_rock {
+    display: block;
+}
+
+.card_choice_paper .card__image_choice_paper {
+    display: block;
+}
+
+.card_choice_scissors .card__image_choice_scissors {
+    display: block;
+}
+
 .status {
     display: flex;
     flex-direction: column;
